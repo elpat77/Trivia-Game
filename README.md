@@ -1,5 +1,7 @@
 # Trivia-Game
 
+### Option One: Basic Quiz (Timed Form)
+
 **[Click Here to Watch the Demo](https://youtu.be/fBIj8YsA9dk)**.
 
 * You'll create a trivia form with multiple choice or true/false options (your choice).
