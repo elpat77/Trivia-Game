@@ -21,14 +21,69 @@
 </head>
 
 <div class="jumbotron">
-    <h1 class="game-name col-sm-12 text-center">Trivia Game</h1>
+    <div class="instructions col-sm-12 text-center py-2">
+        <h1 class="game-name  ">Trivia Game</h1>
+        <h3 class="instructions text-center py-2">Instructions:</h3>
+        <ul class="text-center">
+            <li> You'll create a trivia form with multiple choice or true/false options (your choice).</li>
+            <li>The player will have a limited amount of time to finish the quiz.</li>
+            <li>The game ends when the time runs out. The page will reveal the number of questions that players answer
+                correctly and incorrectly.</li>
+            <li> Don't let the player pick more than one answer per question.</li>
+            <li> Don't forget to include a countdown timer.</li>
+            <br>
+            <li>
+                <h3>Thanks for playing, good luck!</h3>
+            </li>
+        </ul>
+    </div>
 </div>
 
-
 <body>
-    <h1>Hello World</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 ">
 
-
+                <h2 class="question">This is the question, we need to update eat every time a game is started</h2>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 ">
+                <div class="form-check text-center py-2">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                        value="option1">
+                    <label class="form-check-label" for="exampleRadios1"> Default radio </label>
+                </div>
+                <div class="form-check text-center py-2">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                        value="option2">
+                    <label class="form-check-label" for="exampleRadios2"> Second default radio</label>
+                </div>
+                <div class="form-check text-center py-2">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3"
+                        value="option3">
+                    <label class="form-check-label" for="exampleRadios3"> Third option </label>
+                </div>
+                <div class="form-check text-center py-2">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4"
+                        value="option4">
+                    <label class="form-check-label" for="exampleRadios4"> Fourth option </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1"
+                        aria-label="...">
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1"
+                        value="option1" aria-label="...">
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

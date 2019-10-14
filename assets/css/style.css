@@ -1,3 +1,9 @@
 .jumbotron{
     color: rgba(95, 69, 121, 0.815);
 }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
