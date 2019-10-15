@@ -66,6 +66,8 @@ var myQuestions = [
 
 console.log(myQuestions);
 console.log(myQuestions[0].question);
+console.log(myQuestions[0].answer);
+console.log(myQuestions[0].answer.a);
 
 function updateQuestions() {
     $(document).ready(function () {
@@ -75,3 +77,14 @@ function updateQuestions() {
     });
 }
 updateQuestions()
+
+function updateAnswers() {
+    $(document).ready(function () {
+        $('#answer1').html(myQuestions[0].answer.a);
+        // $('#question2').html(myQuestions[1].question);
+        // $('#question3').html(myQuestions[2].question);
+    });
+}
+updateAnswers()
+
+
