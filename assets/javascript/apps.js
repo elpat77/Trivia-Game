@@ -6,7 +6,7 @@ var number;
 var intervalId;
 
 function run() {
-    number = 10;
+    number = 1000;
     clearInterval(intervalId);
     intervalId = setInterval(decrement, 1000);
 }
@@ -31,5 +31,47 @@ function decrement() {
 run();
 
 
-// function updateQuiz
+var myQuestions = [
+    {
+        question: "In what Club Team does Lionel Messi currently play?",
+        answer: {
+            a: "Real Madrid",
+            b: "Manchester United",
+            c: "Barcelona FC",
+            d: "Bayern Munich"
+        },
+        correctAnswer: "c"
+    },
+    {
+        question: "Where is Cristiano Ronaldo from?",
+        answer: {
+            a: "Madrid, Spain",
+            b: "Madeira, Portugal",
+            c: "Milan, Italy",
+            d: "London, England"
+        },
+        correctAnswer: "b"
+    },
+    {
+        question: "What national team won the World Cup last year ",
+        answer: {
+            a: "England",
+            b: "Brazil",
+            c: "Mexico",
+            d: "France"
+        },
+        correctAnswer: "d"
+    }
+]
 
+console.log(myQuestions);
+console.log(myQuestions[0].question);
+
+function updateQuestions() {
+    $(document).ready(function () {
+        $('#question1').html(myQuestions[0].question);
+        $('#question2').html(myQuestions[1].question);
+        $('#question3').html(myQuestions[2].question);
+    });
+}
+updateQuestions()
