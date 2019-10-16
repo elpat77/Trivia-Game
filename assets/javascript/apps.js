@@ -75,9 +75,9 @@ var myQuestions = [
 ]
 
 console.log('my questions', myQuestions);
-console.log(myQuestions.forEach((myQuestions) => console.log('your questions ', myQuestions.question)));
-console.log(myQuestions.forEach((myQuestions) => console.log('your answers', myQuestions.answer)));
-console.log(myQuestions.forEach((myQuestions) => console.log('correct ', myQuestions.correctAnswer)));
+console.log(myQuestions.forEach((questions) => console.log('your questions ', questions.question)));
+console.log(myQuestions.forEach((answers) => console.log('your answers', answers.answer)));
+console.log(myQuestions.forEach((correct) => console.log('correct ', correct.correctAnswer)));
 
 // console.log(myQuestions.question);
 // console.log(myQuestions.answer);
@@ -98,6 +98,7 @@ updateQuestions()
 
 function updateAnswers() {
     $(document).ready(function () {
+
         $('label[for=answer1]').html(myQuestions[0].answer.a);
         $('label[for=answer2]').html(myQuestions[0].answer.b);
         $('label[for=answer3]').html(myQuestions[0].answer.c);
