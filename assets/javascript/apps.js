@@ -53,7 +53,7 @@ var myQuestions = [
         correctAnswer: "b"
     },
     {
-        question: "What national team won the World Cup last year ",
+        question: "What national team won the World Cup in 2018?  ",
         answer: {
             a: "England",
             b: "Brazil",
@@ -61,14 +61,24 @@ var myQuestions = [
             d: "France"
         },
         correctAnswer: "d"
+    },
+    {
+        question: "What clubs team won the Champions League in 2019 ",
+        answer: {
+            a: "Liverpool",
+            b: "Ajax",
+            c: "Bayern Munich",
+            d: "Barcelona FC"
+        },
+        correctAnswer: "a"
     }
 ]
 
-console.log(myQuestions.forEach((question) => console.log(question)));
-console.log(myQuestions.forEach((question) => console.log(question.answer)));
-console.log(myQuestions.forEach((question) => console.log(question.correctAnswer)));
-// console.log(myQuestions.map(({ question, answer }) => ({ question, answer })));
-// console.log(myQuestions);
+console.log('my questions', myQuestions);
+console.log(myQuestions.forEach((myQuestions) => console.log('your questions ', myQuestions.question)));
+console.log(myQuestions.forEach((myQuestions) => console.log('your answers', myQuestions.answer)));
+console.log(myQuestions.forEach((myQuestions) => console.log('correct ', myQuestions.correctAnswer)));
+
 // console.log(myQuestions.question);
 // console.log(myQuestions.answer);
 // console.log(myQuestions[0].question);
@@ -80,22 +90,23 @@ function updateQuestions() {
         $('#question1').html(myQuestions[0].question);
         $('#question2').html(myQuestions[1].question);
         $('#question3').html(myQuestions[2].question);
+        $('#question4').html(myQuestions[3].question);
     });
 }
 updateQuestions()
 
-// function updateAnswers() {
-//     $(document).ready(function () {
-//         for (let index = 0; index < myQuestions.length; index++) {
-//             console.log(myQuestions.question);
 
-//         }
-//         $('#answer1').html(myQuestions[0].answer.a);
-//         // $('#question2').html(myQuestions[1].question);
-//         // $('#question3').html(myQuestions[2].question);
-//     });
-// }
-// updateAnswers()
+function updateAnswers() {
+    $(document).ready(function () {
+        $('label[for=answer1]').html(myQuestions[0].answer.a);
+        $('label[for=answer2]').html(myQuestions[0].answer.b);
+        $('label[for=answer3]').html(myQuestions[0].answer.c);
+        $('label[for=answer4]').html(myQuestions[0].answer.d);
+    }
+    );
+}
+
+updateAnswers()
 
 
 //  https://www.khanacademy.org/computing/computer-programming/html-js-jquery/form-processing-jquery/pt/processing-a-quiz-with-jquery 
