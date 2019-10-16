@@ -64,10 +64,16 @@ var myQuestions = [
     }
 ]
 
-console.log(myQuestions);
-console.log(myQuestions[0].question);
-console.log(myQuestions[0].answer);
-console.log(myQuestions[0].answer.a);
+console.log(myQuestions.forEach((question) => console.log(question)));
+console.log(myQuestions.forEach((question) => console.log(question.answer)));
+console.log(myQuestions.forEach((question) => console.log(question.correctAnswer)));
+// console.log(myQuestions.map(({ question, answer }) => ({ question, answer })));
+// console.log(myQuestions);
+// console.log(myQuestions.question);
+// console.log(myQuestions.answer);
+// console.log(myQuestions[0].question);
+// console.log(myQuestions[0].answer);
+// console.log(myQuestions[0].answer.a);
 
 function updateQuestions() {
     $(document).ready(function () {
@@ -78,13 +84,30 @@ function updateQuestions() {
 }
 updateQuestions()
 
-function updateAnswers() {
-    $(document).ready(function () {
-        $('#answer1').html(myQuestions[0].answer.a);
-        // $('#question2').html(myQuestions[1].question);
-        // $('#question3').html(myQuestions[2].question);
-    });
-}
-updateAnswers()
+// function updateAnswers() {
+//     $(document).ready(function () {
+//         for (let index = 0; index < myQuestions.length; index++) {
+//             console.log(myQuestions.question);
+
+//         }
+//         $('#answer1').html(myQuestions[0].answer.a);
+//         // $('#question2').html(myQuestions[1].question);
+//         // $('#question3').html(myQuestions[2].question);
+//     });
+// }
+// updateAnswers()
+
+
+//  https://www.khanacademy.org/computing/computer-programming/html-js-jquery/form-processing-jquery/pt/processing-a-quiz-with-jquery 
+//  $("#quiz-form").on("submit", function(event) {
+//     event.preventDefault();
+//     var $answer = $("#quiz-answer"); 
+//     var answer = $answer.val();
+//     console.log(answer);
+//     if (answer === "crocodile") {
+//         $("#result").text("Woweeee! You got it! WOOO PARTY!");
+//     } else {
+//         $("#result").text("Try again!");
+//     }
 
 
