@@ -1,5 +1,7 @@
 $(document).ready(function () {
     console.log('hi');
+    updateQuestions();
+    updateAnswers();
 });
 
 var number;
@@ -86,39 +88,37 @@ console.log(myQuestions.forEach((correct) => console.log('correct ', correct.cor
 // console.log(myQuestions[0].answer.a);
 
 function updateQuestions() {
-    $(document).ready(function () {
-        $('#question1').html(myQuestions[0].question);
-        $('#question2').html(myQuestions[1].question);
-        $('#question3').html(myQuestions[2].question);
-        $('#question4').html(myQuestions[3].question);
-    });
+    for (let index = 0; index < myQuestions.length; index++) {
+        $('#question' + (index + 1)).html(myQuestions[index].question);
+
+    }
 }
-updateQuestions()
+
 
 
 function updateAnswers() {
-    $(document).ready(function () {
-        $('label[for=answer1]').html(myQuestions[0].answer.a);
-        $('label[for=answer2]').html(myQuestions[0].answer.b);
-        $('label[for=answer3]').html(myQuestions[0].answer.c);
-        $('label[for=answer4]').html(myQuestions[0].answer.d);
-        $('label[for=q2answer1]').html(myQuestions[1].answer.a);
-        $('label[for=q2answer2]').html(myQuestions[1].answer.b);
-        $('label[for=q2answer3]').html(myQuestions[1].answer.c);
-        $('label[for=q2answer4]').html(myQuestions[1].answer.d);
-        $('label[for=q3answer1]').html(myQuestions[2].answer.a);
-        $('label[for=q3answer2]').html(myQuestions[2].answer.b);
-        $('label[for=q3answer3]').html(myQuestions[2].answer.c);
-        $('label[for=q3answer4]').html(myQuestions[2].answer.d);
-        $('label[for=q4answer1]').html(myQuestions[3].answer.a);
-        $('label[for=q4answer2]').html(myQuestions[3].answer.b);
-        $('label[for=q4answer3]').html(myQuestions[3].answer.c);
-        $('label[for=q4answer4]').html(myQuestions[3].answer.d);
-    }
-    );
+    // for (let index = 0; index < myQuestions.length; index++) {
+    //     $('#answers' + (index + 1)).html(myQuestions[index].question);
+
+    $('label[for=answer1]').html(myQuestions[0].answer.a);
+    $('label[for=answer2]').html(myQuestions[0].answer.b);
+    $('label[for=answer3]').html(myQuestions[0].answer.c);
+    $('label[for=answer4]').html(myQuestions[0].answer.d);
+    $('label[for=q2answer1]').html(myQuestions[1].answer.a);
+    $('label[for=q2answer2]').html(myQuestions[1].answer.b);
+    $('label[for=q2answer3]').html(myQuestions[1].answer.c);
+    $('label[for=q2answer4]').html(myQuestions[1].answer.d);
+    $('label[for=q3answer1]').html(myQuestions[2].answer.a);
+    $('label[for=q3answer2]').html(myQuestions[2].answer.b);
+    $('label[for=q3answer3]').html(myQuestions[2].answer.c);
+    $('label[for=q3answer4]').html(myQuestions[2].answer.d);
+    $('label[for=q4answer1]').html(myQuestions[3].answer.a);
+    $('label[for=q4answer2]').html(myQuestions[3].answer.b);
+    $('label[for=q4answer3]').html(myQuestions[3].answer.c);
+    $('label[for=q4answer4]').html(myQuestions[3].answer.d);
 }
 
-updateAnswers()
+
 
 
 //  https://www.khanacademy.org/computing/computer-programming/html-js-jquery/form-processing-jquery/pt/processing-a-quiz-with-jquery 
