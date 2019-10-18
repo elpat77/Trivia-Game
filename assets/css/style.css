@@ -20,3 +20,7 @@ ul {
 .btn-three {
     color: rgba(95, 69, 121, 0.815)
 }
+
+.h2 .red-text {
+color: red;
+}

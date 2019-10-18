@@ -1,9 +1,9 @@
 $(document).ready(function () {
-    var number;
+    var number = 10;
     var intervalId;
 
     function run() {
-        number = 1000;
+        number = 10;
         clearInterval(intervalId);
         intervalId = setInterval(decrement, 1000);
     }
@@ -23,7 +23,9 @@ $(document).ready(function () {
             stop();
             //  Alert the user that time is up.
             alert("Time is Up!");
+            number = 10;
         }
+        run();
     }
     run();
 
@@ -61,7 +63,6 @@ $(document).ready(function () {
     });
 
     $('#questions').html(html);
-
 });
 
 
