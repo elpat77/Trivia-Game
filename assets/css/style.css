@@ -6,21 +6,31 @@ body{
     background-position: right;
 }
 
-
-.jumbotron{
-    color: rgba(95, 69, 121, 0.815);
-}
-
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
+.jumbotron{
+    color: rgba(156, 59, 59, 0.973);
+    text-align: center;
+    font-size: 20px;
+
+}
+
+
 .btn-three {
     color: rgba(95, 69, 121, 0.815)
 }
 
-.h2 .red-text {
-color: red;
+.card-header, .card-body{
+    text-align: center;
+    font-size: 20px;
+
+}
+
+.correct, .incorrect{
+    text-align: center;
+    font-size: 20px;
 }
