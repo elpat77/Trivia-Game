@@ -31,3 +31,19 @@ $(document).ready(function () {
     //create another on for the submit buton have it end the game set timer to 0 and return results
 
 });
+
+
+$('.wrong1').on('click', function () {
+    var incorrect = $(this).text();
+    console.log('Incorrect ' + incorrect);
+});
+
+let correctAns = 0
+$('.correct1').on('click', function () {
+    var correct = $(this).text();
+    console.log('Correct ' + correct);
+    correctAns++;
+    ///add it to some variable correct answwrs
+});
+
+//when I push submit button diaply the score - Correct-Incorrect
