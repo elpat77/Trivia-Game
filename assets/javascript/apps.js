@@ -6,6 +6,8 @@ $(document).ready(function () {
 var number;
 var intervalId;
 
+//create an on click btn here and a btn on the html
+//create another on for the submit buton have it end the game set timer to 0 and return results
 function run() {
     number = 1000;
     clearInterval(intervalId);
@@ -32,48 +34,6 @@ function decrement() {
 run();
 
 
-var myQuestions = [
-    {
-        question: "In what Club Team does Lionel Messi currently play?",
-        answer: {
-            a: "Real Madrid",
-            b: "Manchester United",
-            c: "Barcelona FC",
-            d: "Bayern Munich"
-        },
-        correctAnswer: "c"
-    },
-    {
-        question: "Where is Cristiano Ronaldo from?",
-        answer: {
-            a: "Madrid, Spain",
-            b: "Madeira, Portugal",
-            c: "Milan, Italy",
-            d: "London, England"
-        },
-        correctAnswer: "b"
-    },
-    {
-        question: "What national team won the World Cup in 2018?  ",
-        answer: {
-            a: "England",
-            b: "Brazil",
-            c: "Mexico",
-            d: "France"
-        },
-        correctAnswer: "d"
-    },
-    {
-        question: "What clubs team won the Champions League in 2019 ",
-        answer: {
-            a: "Liverpool",
-            b: "Ajax",
-            c: "Bayern Munich",
-            d: "Barcelona FC"
-        },
-        correctAnswer: "a"
-    }
-]
 
 console.log('my questions', myQuestions);
 // console.log(myQuestions.forEach((questions) => console.log('your questions ', questions.question)));

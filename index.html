@@ -13,6 +13,15 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <!-- Added a link to Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
     <!-- Added a link to our external js-->
     <script src="./assets/javascript/apps.js"></script>
     <!-- Added some google fonts-->
@@ -22,15 +31,14 @@
 
 <div class="jumbotron">
     <div class="instructions col-sm-12 text-center py-2">
-        <h1 class="game-name  ">Trivia Game</h1>
+        <h1 class="game-name  ">Soccer Quiz!</h1>
         <h3 class="instructions text-center py-2">Instructions:</h3>
         <ul class="text-center">
-            <li> You'll create a trivia form with multiple choice or true/false options (your choice).</li>
-            <li>The player will have a limited amount of time to finish the quiz.</li>
-            <li>The game ends when the time runs out. The page will reveal the number of questions that players answer
+            <li> Simply select the answer that you think is correct. Once all the answers have been chosen, click the
+                Submit Quiz button. </li>
+            <li> You have 45 seconds to submit the quiz, the game ends if the time runs out.</li>
+            <li> The page will reveal the number of questions that players answer
                 correctly and incorrectly.</li>
-            <li> Don't let the player pick more than one answer per question.</li>
-            <li> Don't forget to include a countdown timer.</li>
             <br>
             <li>
                 <h3>Thanks for playing, good luck!</h3>
@@ -41,6 +49,7 @@
 
 <body>
 
+    <!-- //display the countdown clock -->
 
     <div class="container">
         <div class="row">
@@ -49,57 +58,99 @@
             </div>
         </div>
     </div>
+
+    <!-- display cards conytaining the questions and the answers 
+They will include a header for the question and a body for the answer
+The correct answer will have a differnt name than the incorrect one.
+We van use those names to target and display the results -->
+
     <div class="container">
         <div class="row">
-            <div class="col-sm-12 text-center">
-                <h2 div id="question1"></h2>
-                <input type="radio" id="answer1" name="question1" /><label for="q1answer1"></label> <br>
-                <input type="radio" id="answer2" name="question1" /><label for="q1answer2"></label> <br>
-                <input type="radio" id="answer3" name="question1" /><label for="q1answer3"></label> <br>
-                <input type="radio" id="answer4" name="question1" /><label for="q1answer4"></label> <br>
-                <!-- <input type="submit"> -->
+            <div class="col-md-6 col-sm-12 col-12">
+                <div class="card">
+                    <div class="card-header">
+                        In what Club Team does Lionel Messi currently play?
+                    </div>
+                    <div class="card-body">
+                        <div class="list-group" id="list-tab" role="tablist">
+                            <a class="list-group-item list-group-item-action wrong1" id="list-wrong1-list"
+                                data-toggle="list" href="#list-wrong1" role="tab" aria-controls="wrong1">Real Madrid</a>
+                            <a class="list-group-item list-group-item-action wrong1" id="list-wrong1-list"
+                                data-toggle="list" href="#list-wrong1" role="tab" aria-controls="wrong1">Manchester
+                                United</a>
+                            <a class="list-group-item list-group-item-action correct1" id="list-correct1-list"
+                                data-toggle="list" href="#list-correct1" role="tab" aria-controls="correct1">Barcelona
+                                FC</a>
+                            <a class="list-group-item list-group-item-action wrong1" id="list-wrong1-list"
+                                data-toggle="list" href="#list-wrong1" role="tab" aria-controls="wrong1">Bayern
+                                Munich</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-12">
+                <div class="card">
+                    <div class="card-header">
+                        Where is Cristiano Ronaldo from?
+                    </div>
+                    <div class="card-body">
+                        <div class="list-group" id="list-tab" role="tablist">
+                            <a class="list-group-item list-group-item-action wrong2" id="list-wrong2-list"
+                                data-toggle="list" href="#list-wrong2" role="tab" aria-controls="wrong2">Madrid,
+                                Spain</a>
+                            <a class="list-group-item list-group-item-action correct2" id="list-correct2-list"
+                                data-toggle="list" href="#list-correct2" role="tab" aria-controls="correct2">Madeira,
+                                Portugal</a>
+                            <a class="list-group-item list-group-item-action wrong2" id="list-wrong2-list"
+                                data-toggle="list" href="#list-wrong2" role="tab" aria-controls="wrong2">Milan,
+                                Italy</a>
+                            <a class="list-group-item list-group-item-action wrong2" id="list-wrong2-list"
+                                data-toggle="list" href="#list-wrong2" role="tab" aria-controls="wrong2">Sao Paulo,
+                                Brazil</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <br>
-        <div class="row">
-            <div class="col-sm-12 text-center">
-                <h2 div id="question2"></h2>
-                <input type="radio" id="answer1" name="question2" /><label for="q2answer1"></label><br>
-                <input type="radio" id="answer2" name="question2" /><label for="q2answer2"></label><br>
-                <input type="radio" id="answer3" name="question2" /><label for="q2answer3"></label><br>
-                <input type="radio" id="answer4" name="question2" /><label for="q2answer4"></label><br>
-                <!-- <input type="submit"> -->
+        <div class="row mt-5">
+            <div class="col-md-6 col-sm-12 col-12">
+                <div class="card">
+                    <div class="card-header">
+                        What national team won the World Cup in 2018?
+                    </div>
+                    <div class="card-body">
+                        <div class="list-group" id="list-tab" role="tablist">
+                            <a class="list-group-item list-group-item-action wrong3" id="list-wrong3-list"
+                                data-toggle="list" href="#list-wrong3" role="tab" aria-controls="wrong3">England</a>
+                            <a class="list-group-item list-group-item-action wrong3" id="list-wrong3-list"
+                                data-toggle="list" href="#list-wrong3" role="tab" aria-controls="wrong3">Brazil</a>
+                            <a class="list-group-item list-group-item-action wrong3" id="list-wrong3-list"
+                                data-toggle="list" href="#list-wrong3" role="tab" aria-controls="wrong3">Mexico</a>
+                            <a class="list-group-item list-group-item-action correct3" id="list-correct3-list"
+                                data-toggle="list" href="#list-correct3" role="tab" aria-controls="correct3">France</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col-sm-12 text-center">
-                <h2 div id="question3"></h2>
-                <input type="radio" id="answer1" name="question3" /><label for="q3answer1"></label><br>
-                <input type="radio" id="answer2" name="question3" /><label for="q3answer2"></label><br>
-                <input type="radio" id="answer3" name="question3" /><label for="q3answer3"></label><br>
-                <input type="radio" id="answer4" name="question3" /><label for="q3answer4"></label><br>
-                <!-- <input type="submit"> -->
-            </div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col-sm-12 text-center">
-                <h2 div id="question4"></h2>
-                <input type="radio" id="answer1" name="question4" /><label for="q4answer1"></label><br>
-                <input type="radio" id="answer2" name="question4" /><label for="q4answer2"></label><br>
-                <input type="radio" id="answer3" name="question4" /><label for="q4answer3"></label><br>
-                <input type="radio" id="answer4" name="question4" /><label for="q4answer4"></label><br>
-                <!-- <input type="submit"> -->
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12 ">
-                <div class="text-center py-2">
-                    <input type="submit">
-                    <button id="submit">Submit Quiz</button>
+            <div class="col-md-6 col-sm-12 col-12">
+                <div class="card">
+                    <div class="card-header">
+                        What clubs team won the Champions League in 2019?
+                    </div>
+                    <div class="card-body">
+                        <div class="list-group" id="list-tab" role="tablist">
+                            <a class="list-group-item list-group-item-action correct4" id="list-correct4-list"
+                                data-toggle="list" href="#list-correct4" role="tab"
+                                aria-controls="correct4">Liverpool</a>
+                            <a class="list-group-item list-group-item-action wrong4" id="list-wrong4-list"
+                                data-toggle="list" href="#list-wrong4" role="tab" aria-controls="wrong4">Ajax</a>
+                            <a class="list-group-item list-group-item-action wrong4" id="list-wrong4-list"
+                                data-toggle="list" href="#list-wrong4" role="tab" aria-controls="wrong4">Paris Saint
+                                Germain</a>
+                            <a class="list-group-item list-group-item-action wrong4" id="list-wrong4-list"
+                                data-toggle="list" href="#list-wrong4" role="tab" aria-controls="wrong4">Juventus</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -109,10 +160,23 @@
         <div class="row">
             <div class="col-sm-12 ">
                 <div class="text-center py-2">
-                    <div id="results">Results</div>
+                    <button type="submit" class="btn btn-primary btn-lg" role="button" aria-pressed="true">Submit
+                        Quiz</button>
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-md-4 col-sm-12 col-12">
+                <div class="card text-center bg-success mb-2 correct" style="height: 50px"> Correct Answers:</div>
+                <div class="card text-center bg-danger mb-2 incorrect" style="height: 50px"> Incorrect Answers:
+                </div>
+            </div>
+
+        </div>
+    </div>
     </div>
 
 
