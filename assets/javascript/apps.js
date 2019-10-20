@@ -28,22 +28,60 @@ $(document).ready(function () {
     }
     run();
 
-    //create another on for the submit buton have it end the game set timer to 0 and return results
+    function updateScore() {
+        $(document).ready(function () {
+            $("#incorrectAns").text(incorrectAns);
+            $("#correctAns").text(correctAns);
+        });
+    }
 
+    let incorrectAns = 0;
+    let correctAns = false;
+
+    $('.wrong1').on('click', function () {
+        incorrectAns++;
+        console.log('incorrect ' + incorrectAns);
+    });
+
+    $('.correct1').on('click', function () {
+        correctAns++;
+        console.log('correct ' + correctAns);
+    });
+
+    $('.wrong2').on('click', function () {
+        incorrectAns++;
+        console.log('incorrect ' + incorrectAns);
+    });
+
+    $('.correct2').on('click', function () {
+        correctAns++;
+        console.log('correct ' + correctAns);
+    });
+
+    $('.wrong3').on('click', function () {
+        incorrectAns++;
+        console.log('incorrect ' + incorrectAns);
+    });
+
+    $('.correct3').on('click', function () {
+        correctAns++;
+        console.log('correct ' + correctAns);
+    });
+
+    $('.wrong4').on('click', function () {
+        incorrectAns++;
+        console.log('incorrect ' + incorrectAns);
+    });
+
+    $('.correct4').on('click', function () {
+        correctAns++;
+        console.log('correct ' + correctAns);
+    });
+
+    $('.submit').on('click', function () {
+        console.log('Thanks for playing!');
+        updateScore();
+        stop();
+
+    });
 });
-
-
-$('.wrong1').on('click', function () {
-    var incorrect = $(this).text();
-    console.log('Incorrect ' + incorrect);
-});
-
-let correctAns = 0
-$('.correct1').on('click', function () {
-    var correct = $(this).text();
-    console.log('Correct ' + correct);
-    correctAns++;
-    ///add it to some variable correct answwrs
-});
-
-//when I push submit button diaply the score - Correct-Incorrect
