@@ -4,7 +4,7 @@ $(document).ready(function () {
     var intervalId;
 
     function run() {
-        number = 100;
+        number = 45;
         clearInterval(intervalId);
         intervalId = setInterval(decrement, 1000);
     }
@@ -28,53 +28,71 @@ $(document).ready(function () {
     }
     run();
 
+
+    let incorrectAns = 0;
+    let correctAns = 0;
+
     function updateScore() {
         $(document).ready(function () {
             $("#incorrectAns").text(incorrectAns);
             $("#correctAns").text(correctAns);
         });
     }
-
-    let incorrectAns = 0;
-    let correctAns = false;
+    updateScore();
 
     $('.wrong1').on('click', function () {
         incorrectAns++;
+        $(".wrong1").hide();
+        $(".correct1").hide();
         console.log('incorrect ' + incorrectAns);
     });
 
     $('.correct1').on('click', function () {
         correctAns++;
+        $(".wrong1").hide();
+        $(".correct1").hide();
         console.log('correct ' + correctAns);
     });
 
     $('.wrong2').on('click', function () {
         incorrectAns++;
+        $(".wrong2").hide();
+        $(".correct2").hide();
         console.log('incorrect ' + incorrectAns);
     });
 
     $('.correct2').on('click', function () {
         correctAns++;
+        $(".wrong2").hide();
+        $(".correct2").hide();
         console.log('correct ' + correctAns);
     });
 
     $('.wrong3').on('click', function () {
         incorrectAns++;
+        $(".wrong3").hide();
+        $(".correct3").hide();
         console.log('incorrect ' + incorrectAns);
     });
 
     $('.correct3').on('click', function () {
         correctAns++;
+        $(".wrong3").hide();
+        $(".correct3").hide();
         console.log('correct ' + correctAns);
     });
 
     $('.wrong4').on('click', function () {
         incorrectAns++;
+        $(".wrong4").hide();
+        $(".correct4").hide();
         console.log('incorrect ' + incorrectAns);
     });
 
     $('.correct4').on('click', function () {
         correctAns++;
+        $(".wrong4").hide();
+        $(".correct4").hide();
         console.log('correct ' + correctAns);
     });
 
@@ -82,6 +100,6 @@ $(document).ready(function () {
         console.log('Thanks for playing!');
         updateScore();
         stop();
-
+        alert("Thanks for playing! Refresh the page to try again!" + ("\nIncorrect Answers:  " + incorrectAns) + ('\nCorrectAnswers: ' + correctAns));
     });
 });
