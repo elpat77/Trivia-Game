@@ -45,6 +45,7 @@ $(document).ready(function () {
         incorrectAns++;
         $(".wrong1").hide();
         $(".correct1").hide();
+        $(".card-body1").html("Wrong! The correct answer is Barcelona FC");
         console.log('incorrect ' + incorrectAns);
     });
 
@@ -52,6 +53,7 @@ $(document).ready(function () {
         correctAns++;
         $(".wrong1").hide();
         $(".correct1").hide();
+        $(".card-body1").html("You are correct!");
         console.log('correct ' + correctAns);
     });
 
@@ -59,6 +61,7 @@ $(document).ready(function () {
         incorrectAns++;
         $(".wrong2").hide();
         $(".correct2").hide();
+        $(".card-body2").html("Wrong! The correct answer is Madeira,Portugal");
         console.log('incorrect ' + incorrectAns);
     });
 
@@ -66,6 +69,7 @@ $(document).ready(function () {
         correctAns++;
         $(".wrong2").hide();
         $(".correct2").hide();
+        $(".card-body2").html("You are correct!");
         console.log('correct ' + correctAns);
     });
 
@@ -73,6 +77,7 @@ $(document).ready(function () {
         incorrectAns++;
         $(".wrong3").hide();
         $(".correct3").hide();
+        $(".card-body3").html("Wrong! The correct answer is France");
         console.log('incorrect ' + incorrectAns);
     });
 
@@ -80,6 +85,7 @@ $(document).ready(function () {
         correctAns++;
         $(".wrong3").hide();
         $(".correct3").hide();
+        $(".card-body3").html("You are correct!");
         console.log('correct ' + correctAns);
     });
 
@@ -87,6 +93,7 @@ $(document).ready(function () {
         incorrectAns++;
         $(".wrong4").hide();
         $(".correct4").hide();
+        $(".card-body4").html("Wrong! The correct answer is Liverpool");
         console.log('incorrect ' + incorrectAns);
     });
 
@@ -94,6 +101,7 @@ $(document).ready(function () {
         correctAns++;
         $(".wrong4").hide();
         $(".correct4").hide();
+        $(".card-body4").html("You are correct!");
         console.log('correct ' + correctAns);
     });
 

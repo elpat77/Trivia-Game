@@ -34,10 +34,16 @@ ul {
     font-family: 'Oswald', sans-serif;
 }
 
-.card-body{
+.card-body1, .card-body2, .card-body3, .card-body4 {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
 .show-number, .submit , .correct, .incorrect{
     font-family: 'PT Sans', sans-serif;
 }
+
+h4{
+    color:red;
+}
+
+
