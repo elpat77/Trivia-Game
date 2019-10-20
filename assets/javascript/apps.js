@@ -23,7 +23,8 @@ $(document).ready(function () {
             //  ...run the stop function.
             stop();
             //  Alert the user that time is up.
-            alert("Time is Up!");
+            alert("Time is Up! Refresh the page to try again!" + ("\nIncorrect Answers:  " + incorrectAns) + ('\nCorrectAnswers: ' + correctAns));
+            updateScore();
         }
     }
     run();

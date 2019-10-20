@@ -3,6 +3,7 @@ body{
     background-repeat: no-repeat;
     background-attachment: scroll;  
     background-position: right;
+    background-size: cover;
 }
 
 ul {
