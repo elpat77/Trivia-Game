@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trivia Game</title>
+
+</head>
+
+<body>
+
+
+    <!-- //display the countdown clock -->
+
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col-sm-12 text-center">
+                <div class="text-center">
+                    <a class="btn text-center btn-warning btn-lg show-number" href="#" role="button"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-md-center mt-3">
+            <div class="col-md-4 col-sm-12">
+                <div class="card bg-success correct" style="height: 70px"> Correct Answers:<span id="correctAns"></span>
+                </div>
+                <div class="card bg-danger incorrect mt-2" style="height: 70px"> Incorrect Answers:<span
+                        id="incorrectAns"></span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <!-- display cards conytaining the questions and the answers 
+They will include a header for the question and a body for the answer
+The correct answer will have a differnt name than the incorrect one.
+We van use those names to target and display the results -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 col-12">
+                <div class="card mt-3">
+                    <div class="card-header">
+                        In what Club Team does Lionel Messi currently play?
+                    </div>
+                    <div class="card-body1 text-center m-2 ">
+                        <div class="list-group" id="list-tab" role="tablist">
+                            <a class="list-group-item list-group-item-action wrong1" id="list-wrong1-list"
+                                data-toggle="list" href="#list-wrong1" role="tab" aria-controls="wrong1">Real Madrid</a>
+                            <a class="list-group-item list-group-item-action wrong1" id="list-wrong1-list"
+                                data-toggle="list" href="#list-wrong1" role="tab" aria-controls="wrong1">Manchester
+                                United</a>
+                            <a class="list-group-item list-group-item-action correct1" id="list-correct1-list"
+                                data-toggle="list" href="#list-correct1" role="tab" aria-controls="correct1">Barcelona
+                                FC</a>
+                            <a class="list-group-item list-group-item-action wrong1" id="list-wrong1-list"
+                                data-toggle="list" href="#list-wrong1" role="tab" aria-controls="wrong1">Bayern
+                                Munich</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-12">
+                <div class="card mt-3">
+                    <div class="card-header">
+                        Where is Cristiano Ronaldo from?
+                    </div>
+                    <div class="card-body2 text-center m-2">
+                        <div class="list-group" id="list-tab" role="tablist">
+                            <a class="list-group-item list-group-item-action wrong2" id="list-wrong2-list"
+                                data-toggle="list" href="#list-wrong2" role="tab" aria-controls="wrong2">Madrid,
+                                Spain</a>
+                            <a class="list-group-item list-group-item-action correct2" id="list-correct2-list"
+                                data-toggle="list" href="#list-correct2" role="tab" aria-controls="correct2">Madeira,
+                                Portugal</a>
+                            <a class="list-group-item list-group-item-action wrong2" id="list-wrong2-list"
+                                data-toggle="list" href="#list-wrong2" role="tab" aria-controls="wrong2">Milan,
+                                Italy</a>
+                            <a class="list-group-item list-group-item-action wrong2" id="list-wrong2-list"
+                                data-toggle="list" href="#list-wrong2" role="tab" aria-controls="wrong2">Sao Paulo,
+                                Brazil</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-sm-12 col-12">
+                <div class="card mt-3">
+                    <div class="card-header">
+                        What National Team won the World Cup in 2018?
+                    </div>
+                    <div class="card-body3 text-center m-2">
+                        <div class="list-group" id="list-tab" role="tablist">
+                            <a class="list-group-item list-group-item-action wrong3" id="list-wrong3-list"
+                                data-toggle="list" href="#list-wrong3" role="tab" aria-controls="wrong3">England</a>
+                            <a class="list-group-item list-group-item-action wrong3" id="list-wrong3-list"
+                                data-toggle="list" href="#list-wrong3" role="tab" aria-controls="wrong3">Brazil</a>
+                            <a class="list-group-item list-group-item-action wrong3" id="list-wrong3-list"
+                                data-toggle="list" href="#list-wrong3" role="tab" aria-controls="wrong3">Mexico</a>
+                            <a class="list-group-item list-group-item-action correct3" id="list-correct3-list"
+                                data-toggle="list" href="#list-correct3" role="tab" aria-controls="correct3">France</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-12">
+                <div class="card mt-3">
+                    <div class="card-header">
+                        What Club Team won the Champions League in 2019?
+                    </div>
+                    <div class="card-body4 text-center m-2">
+                        <div class="list-group" id="list-tab" role="tablist">
+                            <a class="list-group-item list-group-item-action correct4" id="list-correct4-list"
+                                data-toggle="list" href="#list-correct4" role="tab"
+                                aria-controls="correct4">Liverpool</a>
+                            <a class="list-group-item list-group-item-action wrong4" id="list-wrong4-list"
+                                data-toggle="list" href="#list-wrong4" role="tab" aria-controls="wrong4">Barcelona
+                                FC</a>
+                            <a class="list-group-item list-group-item-action wrong4" id="list-wrong4-list"
+                                data-toggle="list" href="#list-wrong4" role="tab" aria-controls="wrong4">Paris Saint
+                                Germain</a>
+                            <a class="list-group-item list-group-item-action wrong4" id="list-wrong4-list"
+                                data-toggle="list" href="#list-wrong4" role="tab" aria-controls="wrong4">Juventus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row mt-3 mb-5">
+            <div class="col-sm-12 ">
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-lg submit" role="button" aria-pressed="true">Submit
+                        Quiz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Added link to the jQuery Library -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- Added a link to our external stylesheet-->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- Added a link to our external js-->
+    <script src="./assets/javascript/apps.js"></script>
+    <!-- Added some google fonts-->
+    <link
+        href="https://fonts.googleapis.com/css?family=Chilanka|Cute+Font|Inconsolata|Oswald|PT+Sans|Source+Sans+Pro|Turret+Road&display=swap"
+        rel="stylesheet">
+
+
+</body>
+
+</html>

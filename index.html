@@ -10,137 +10,34 @@
 </head>
 
 <body>
-
-    <!-- //display the countdown clock -->
-
     <div class="container">
-        <div class="row mt-3">
-            <div class="col-sm-12 text-center">
-                <div class="text-center">
-                    <a class="btn text-center btn-warning btn-lg show-number" href="#" role="button"></a>
+        <div class="row justify-content-md-center mt-5">
+            <div class="col-md-8 col-sm-12">
+                <div class="card bg-success correct">
+                    <h1 class="display-3 text-center mt-3">Soccer Quiz</h1>
+                    <hr class="my-4">
+                    <ul class="instructions col-sm-12">
+                        <li>For each question, select the answer that you think is correct. </li><br>
+                        <li>You only have one try, so choose wisely!</li><br>
+                        <li>Once all the answers have been selected, click the
+                            'Submit Quiz' button. </li><br>
+                        <li> Forgot to mention, you only have 45 seconds to complete the quiz!</li>
+                    </ul>
+                    <hr class="my-4">
+                    <h1 class="display-4 text-center mb-3">Good Luck!</h1>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row justify-content-md-center mt-3">
-            <div class="col-md-4 col-sm-12">
-                <div class="card bg-success correct" style="height: 70px"> Correct Answers:<span id="correctAns"></span>
-                </div>
-                <div class="card bg-danger incorrect mt-2" style="height: 70px"> Incorrect Answers:<span
-                        id="incorrectAns"></span>
-                </div>
-            </div>
 
-        </div>
-    </div>
-    </div>
-
-    <!-- display cards conytaining the questions and the answers 
-They will include a header for the question and a body for the answer
-The correct answer will have a differnt name than the incorrect one.
-We van use those names to target and display the results -->
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-sm-12 col-12">
-                <div class="card mt-3">
-                    <div class="card-header">
-                        In what Club Team does Lionel Messi currently play?
-                    </div>
-                    <div class="card-body1 text-center m-2 ">
-                        <div class="list-group" id="list-tab" role="tablist">
-                            <a class="list-group-item list-group-item-action wrong1" id="list-wrong1-list"
-                                data-toggle="list" href="#list-wrong1" role="tab" aria-controls="wrong1">Real Madrid</a>
-                            <a class="list-group-item list-group-item-action wrong1" id="list-wrong1-list"
-                                data-toggle="list" href="#list-wrong1" role="tab" aria-controls="wrong1">Manchester
-                                United</a>
-                            <a class="list-group-item list-group-item-action correct1" id="list-correct1-list"
-                                data-toggle="list" href="#list-correct1" role="tab" aria-controls="correct1">Barcelona
-                                FC</a>
-                            <a class="list-group-item list-group-item-action wrong1" id="list-wrong1-list"
-                                data-toggle="list" href="#list-wrong1" role="tab" aria-controls="wrong1">Bayern
-                                Munich</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-sm-12 col-12">
-                <div class="card mt-3">
-                    <div class="card-header">
-                        Where is Cristiano Ronaldo from?
-                    </div>
-                    <div class="card-body2 text-center m-2">
-                        <div class="list-group" id="list-tab" role="tablist">
-                            <a class="list-group-item list-group-item-action wrong2" id="list-wrong2-list"
-                                data-toggle="list" href="#list-wrong2" role="tab" aria-controls="wrong2">Madrid,
-                                Spain</a>
-                            <a class="list-group-item list-group-item-action correct2" id="list-correct2-list"
-                                data-toggle="list" href="#list-correct2" role="tab" aria-controls="correct2">Madeira,
-                                Portugal</a>
-                            <a class="list-group-item list-group-item-action wrong2" id="list-wrong2-list"
-                                data-toggle="list" href="#list-wrong2" role="tab" aria-controls="wrong2">Milan,
-                                Italy</a>
-                            <a class="list-group-item list-group-item-action wrong2" id="list-wrong2-list"
-                                data-toggle="list" href="#list-wrong2" role="tab" aria-controls="wrong2">Sao Paulo,
-                                Brazil</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-sm-12 col-12">
-                <div class="card mt-3">
-                    <div class="card-header">
-                        What National Team won the World Cup in 2018?
-                    </div>
-                    <div class="card-body3 text-center m-2">
-                        <div class="list-group" id="list-tab" role="tablist">
-                            <a class="list-group-item list-group-item-action wrong3" id="list-wrong3-list"
-                                data-toggle="list" href="#list-wrong3" role="tab" aria-controls="wrong3">England</a>
-                            <a class="list-group-item list-group-item-action wrong3" id="list-wrong3-list"
-                                data-toggle="list" href="#list-wrong3" role="tab" aria-controls="wrong3">Brazil</a>
-                            <a class="list-group-item list-group-item-action wrong3" id="list-wrong3-list"
-                                data-toggle="list" href="#list-wrong3" role="tab" aria-controls="wrong3">Mexico</a>
-                            <a class="list-group-item list-group-item-action correct3" id="list-correct3-list"
-                                data-toggle="list" href="#list-correct3" role="tab" aria-controls="correct3">France</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-sm-12 col-12">
-                <div class="card mt-3">
-                    <div class="card-header">
-                        What Club Team won the Champions League in 2019?
-                    </div>
-                    <div class="card-body4 text-center m-2">
-                        <div class="list-group" id="list-tab" role="tablist">
-                            <a class="list-group-item list-group-item-action correct4" id="list-correct4-list"
-                                data-toggle="list" href="#list-correct4" role="tab"
-                                aria-controls="correct4">Liverpool</a>
-                            <a class="list-group-item list-group-item-action wrong4" id="list-wrong4-list"
-                                data-toggle="list" href="#list-wrong4" role="tab" aria-controls="wrong4">Barcelona
-                                FC</a>
-                            <a class="list-group-item list-group-item-action wrong4" id="list-wrong4-list"
-                                data-toggle="list" href="#list-wrong4" role="tab" aria-controls="wrong4">Paris Saint
-                                Germain</a>
-                            <a class="list-group-item list-group-item-action wrong4" id="list-wrong4-list"
-                                data-toggle="list" href="#list-wrong4" role="tab" aria-controls="wrong4">Juventus</a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
 
     <div class="container">
-        <div class="row mt-3 mb-5">
-            <div class="col-sm-12 ">
-                <div class="text-center">
-                    <button type="submit" class="btn btn-primary btn-lg submit" role="button" aria-pressed="true">Submit
-                        Quiz</button>
-                </div>
+        <div class="row justify-content-md-center mt-5">
+
+            <div class="col-md-4 col-sm-12 display-4 text-center">
+                <a href="game.html" class="list-group-item list-group-item-action bg-primary startQuiz text-dark">Start
+                    Quiz</a>
+
             </div>
         </div>
     </div>
