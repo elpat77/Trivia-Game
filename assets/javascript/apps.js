@@ -29,7 +29,6 @@ $(document).ready(function () {
     }
     run();
 
-
     let incorrectAns = 0;
     let correctAns = 0;
 
@@ -47,6 +46,7 @@ $(document).ready(function () {
         $(".correct1").hide();
         $(".card-body1").html("Wrong! The correct answer is Barcelona FC");
         console.log('incorrect ' + incorrectAns);
+        updateScore();
     });
 
     $('.correct1').on('click', function () {
@@ -55,6 +55,7 @@ $(document).ready(function () {
         $(".correct1").hide();
         $(".card-body1").html("You are correct!");
         console.log('correct ' + correctAns);
+        updateScore();
     });
 
     $('.wrong2').on('click', function () {
@@ -63,6 +64,7 @@ $(document).ready(function () {
         $(".correct2").hide();
         $(".card-body2").html("Wrong! The correct answer is Madeira,Portugal");
         console.log('incorrect ' + incorrectAns);
+        updateScore();
     });
 
     $('.correct2').on('click', function () {
@@ -71,6 +73,7 @@ $(document).ready(function () {
         $(".correct2").hide();
         $(".card-body2").html("You are correct!");
         console.log('correct ' + correctAns);
+        updateScore();
     });
 
     $('.wrong3').on('click', function () {
@@ -79,6 +82,7 @@ $(document).ready(function () {
         $(".correct3").hide();
         $(".card-body3").html("Wrong! The correct answer is France");
         console.log('incorrect ' + incorrectAns);
+        updateScore();
     });
 
     $('.correct3').on('click', function () {
@@ -87,6 +91,7 @@ $(document).ready(function () {
         $(".correct3").hide();
         $(".card-body3").html("You are correct!");
         console.log('correct ' + correctAns);
+        updateScore();
     });
 
     $('.wrong4').on('click', function () {
@@ -95,6 +100,7 @@ $(document).ready(function () {
         $(".correct4").hide();
         $(".card-body4").html("Wrong! The correct answer is Liverpool");
         console.log('incorrect ' + incorrectAns);
+        updateScore();
     });
 
     $('.correct4').on('click', function () {
@@ -103,6 +109,7 @@ $(document).ready(function () {
         $(".correct4").hide();
         $(".card-body4").html("You are correct!");
         console.log('correct ' + correctAns);
+        updateScore();
     });
 
     $('.submit').on('click', function () {

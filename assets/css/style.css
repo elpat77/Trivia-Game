@@ -7,8 +7,9 @@ body{
     background: url('./images/bkg.jpg');
     background-repeat: no-repeat;
     background-attachment: scroll;  
-    background-position: right;
     background-size: cover;
+    background-position: initial;
+    
 }
 
 ul {
